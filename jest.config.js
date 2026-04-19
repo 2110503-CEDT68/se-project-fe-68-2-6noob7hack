@@ -15,7 +15,10 @@ const config = {
   testTimeout: 30000,
   globals: {
     fetch: global.fetch,
-  }
+  },
+  testPathIgnorePatterns: [
+    '/tests/playwright/'   //exclude Playwright tests
+  ],
 }
  
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
